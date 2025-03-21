@@ -1,0 +1,45 @@
+# Instructions for the i8008 processor
+#
+# Instruction Mnemonic
+# |   Operands
+# |   |     Bytes (Hex)
+# |   |     |
+
+HLT   void  [00]
+RST   imm8  [r: /0r5]
+INC   reg8  [r: /0r0]
+DEC   reg8  [r: /0r1]
+
+RCL   regA  [02]
+RCR   regA  [0A]
+ROL   regA  [12]
+ROR   regA  [1A]
+
+JMP   imm16 [i: 44 i]
+Jcc   imm16 [i: 40+c i]
+CALL  imm16 [i: 46 i]
+Ccc   imm16 [i: 42+c i]
+RET   void  [07]
+Rcc   void  [03+c]
+
+ADD   regA,imm8  [-i: 04 i]
+ADD   regA,reg8  [-m: 80+m]
+ADC   regA,imm8  [-i: 0C i]
+ADC   regA,reg8  [-m: 88+m]
+SUB   regA,imm8  [-i: 14 i]
+SUB   regA,reg8  [-m: 90+m]
+SBB   regA,imm8  [-i: 1C i]
+SBB   regA,reg8  [-m: 98+m]
+AND   regA,imm8  [-i: 24 i]
+AND   regA,reg8  [-m: A0+m]
+XOR   regA,imm8  [-i: 2C i]
+XOR   regA,reg8  [-m: A8+m]
+OR    regA,imm8  [-i: 34 i]
+OR    regA,reg8  [-m: B0+m]
+CMP   regA,imm8  [-i: 3C i]
+CMP   regA,reg8  [-m: B8+m]
+
+MOV   reg8,imm8  [ri: /0r6 i]
+MOV   reg8,reg8  [rm: /3r0+m]
+OUT   imm8,regA  [p-: 41+p]
+IN    regA,imm8  [-p: 41+p]

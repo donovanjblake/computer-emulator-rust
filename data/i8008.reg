@@ -1,0 +1,15 @@
+# Registers for the i8008 processor
+# 
+# Register Mnemonic
+# |   Register Class
+# |   |     Register Number
+# |   |     |
+
+rA  reg8   0
+rB  reg8   1
+rC  reg8   2
+rD  reg8   3
+rE  reg8   4
+rH  reg8   5
+rL  reg8   6
+rM  reg8   7

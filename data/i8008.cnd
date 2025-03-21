@@ -1,0 +1,14 @@
+# Condition codes for the i8008 processor
+#
+# Condition Mnemonic
+# |  Condition Number
+# |  |
+
+NC  00
+NZ  08
+NS  10
+NP  18
+ C  20
+ Z  28
+ S  30
+ P  38
